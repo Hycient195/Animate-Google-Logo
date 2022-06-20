@@ -1,0 +1,74 @@
+/* @keyframes spin-logo {
+  0%{
+    transform: rotate(0deg);
+    background-color: red;
+  }
+  25%{
+    background-color: orangered;
+  }
+  50%{
+    transform: rotate(760deg);
+    background-color: orange;
+  }
+  55%{
+    background-color: yellow;
+    transform: translateY(300px);
+  }
+  65%{
+    background-color: rgb(10, 215, 10);
+  }
+  83%{
+    background-color: blue;
+  }
+  90%{
+    background-color: indigo;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    transform: translatey(150px);
+  }
+  100%{
+    background-color: violet;
+
+  }
+} */
+
+@keyframes spin-logo {
+  0%{
+    background: linear-gradient(45deg, red, orangered);
+    transform: rotate(0deg);
+  }
+  10%{
+    background: linear-gradient(45deg, orangered, orange);
+  }
+  25%{
+    background: linear-gradient(45deg, orange, yellow);
+  }
+  40%{
+    background: linear-gradient(45deg, yellow, rgb(10, 215, 10));
+    transform: rotate(720deg) translateX(-220px) translateY(-100px)
+  }
+  55%{
+    background: linear-gradient(45deg, rgb(10, 215, 10), blue);
+    transform: rotate(0deg) translateX(220px) translateY(-100px)
+  }
+  70%{
+    background: linear-gradient(45deg, blue, indigo);
+    border-radius: 50%;
+  }
+  85%{
+    background: linear-gradient(45deg, indigo, violet);
+    transform: translateX(0px) translateY(-100px);
+    transform: rotate(-360deg);
+  }
+  100%{
+    /* background-color: violet; */
+    background: linear-gradient(45deg, violet, red);
+  }
+}
+
+.spin-logo{
+  animation: spin-logo 5s ease-in-out infinite ;
+  padding: 2em;
+  border-radius: 10px;
+}
